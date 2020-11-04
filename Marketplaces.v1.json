@@ -1,15 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "Api Documentation",
+    "description": "Marketplace and Submerchant Management System",
     "version": "1.0",
-    "title": "Api Documentation",
-    "termsOfService": "urn:tos",
-    "contact": {},
-    "license": {
-      "name": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
+    "title": "Marketplaces",
+    "contact": {
+      "email": "contact@dalenys.com",
+      "url": "https://www.dalenys.com/"
+    },
+    "license": {}
   },
   "host": "staging-payment.dlns.io",
   "tags": [
