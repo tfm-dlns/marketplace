@@ -1,0 +1,3607 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Api Documentation",
+    "version": "1.0",
+    "title": "Api Documentation",
+    "termsOfService": "urn:tos",
+    "contact": {},
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "host": "staging-payment.dlns.io:80",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "api-callback",
+      "description": "Api Callback"
+    },
+    {
+      "name": "api-operator",
+      "description": "Api Operator"
+    },
+    {
+      "name": "api-sub-merchant",
+      "description": "Api Sub Merchant"
+    },
+    {
+      "name": "api-transfer",
+      "description": "Api Transfer"
+    },
+    {
+      "name": "basic-error-controller",
+      "description": "Basic Error Controller"
+    },
+    {
+      "name": "operation-handler",
+      "description": "Operation Handler"
+    }
+  ],
+  "paths": {
+    "/error": {
+      "get": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "head": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingHEAD",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingDELETE",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      },
+      "options": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingOPTIONS",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      },
+      "patch": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object"
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/info": {
+      "get": {
+        "tags": [
+          "operation-handler"
+        ],
+        "summary": "handle",
+        "operationId": "handleUsingGET",
+        "produces": [
+          "application/vnd.spring-boot.actuator.v3+json",
+          "application/json",
+          "application/vnd.spring-boot.actuator.v2+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/ibanUpdate": {
+      "post": {
+        "tags": [
+          "api-callback"
+        ],
+        "summary": "create",
+        "operationId": "createUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "params",
+            "in": "query",
+            "description": "params",
+            "required": true,
+            "items": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/kycUpdate": {
+      "post": {
+        "tags": [
+          "api-callback"
+        ],
+        "summary": "kycUpdate",
+        "operationId": "kycUpdateUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "params",
+            "in": "query",
+            "description": "params",
+            "required": true,
+            "items": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/operators": {
+      "get": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "Get items",
+        "operationId": "getItems",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«Operator»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "300"
+      },
+      "post": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "Create an item",
+        "operationId": "createItem",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OperatorCreateRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Operator"
+            }
+          },
+          "201": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Operator"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "300"
+      }
+    },
+    "/marketplaces/operators/distinct": {
+      "get": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "Get distinct values for a given field",
+        "operationId": "distinct",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«object»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "100"
+      }
+    },
+    "/marketplaces/operators/recap": {
+      "get": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "Get recap quantities for a given field",
+        "operationId": "recap",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«RecapEntry»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "150"
+      }
+    },
+    "/marketplaces/operators/{id}": {
+      "get": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "Get item",
+        "operationId": "getItem",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Operator"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "200"
+      },
+      "put": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "Update item",
+        "operationId": "updateItem",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "updateRequestItem",
+            "description": "updateRequestItem",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OperatorUpdateRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Operator"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "400"
+      },
+      "delete": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "Delete item",
+        "operationId": "deleteItem",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "204": {
+            "description": "No Content",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "500"
+      }
+    },
+    "/marketplaces/operators/{id}/payouts": {
+      "get": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "getPayout",
+        "operationId": "getPayoutUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PayoutResponse"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "api-operator"
+        ],
+        "summary": "createPayout",
+        "operationId": "createPayoutUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "operatorPayout",
+            "description": "operatorPayout",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OperatorPayout"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/PayoutResponse"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/submerchants": {
+      "get": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "Get items",
+        "operationId": "getItems_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«SubMerchant»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "300"
+      },
+      "post": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "Create an item",
+        "operationId": "createItem_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SubMerchant"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SubMerchant"
+            }
+          },
+          "201": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SubMerchant"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "300"
+      }
+    },
+    "/marketplaces/submerchants/distinct": {
+      "get": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "Get distinct values for a given field",
+        "operationId": "distinct_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«object»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "100"
+      }
+    },
+    "/marketplaces/submerchants/recap": {
+      "get": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "Get recap quantities for a given field",
+        "operationId": "recap_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«RecapEntry»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "150"
+      }
+    },
+    "/marketplaces/submerchants/{id}": {
+      "get": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "Get item",
+        "operationId": "getItem_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SubMerchant"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "200"
+      },
+      "put": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "Update item",
+        "operationId": "updateItem_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "updateRequestItem",
+            "description": "updateRequestItem",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SubMerchant"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SubMerchant"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "400"
+      },
+      "delete": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "Delete item",
+        "operationId": "deleteItem_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "204": {
+            "description": "No Content",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "500"
+      }
+    },
+    "/marketplaces/submerchants/{id}/iban": {
+      "get": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "readIban",
+        "operationId": "readIbanUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«Iban»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "createIban",
+        "operationId": "createIbanUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "writeIbanRequest",
+            "description": "writeIbanRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WriteIbanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Iban"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/submerchants/{id}/iban/{ibanId}": {
+      "put": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "updateIban",
+        "operationId": "updateIbanUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ibanId",
+            "in": "path",
+            "description": "ibanId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "updateIbanRequest",
+            "description": "updateIbanRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateIbanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Iban"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "deleteIban",
+        "operationId": "deleteIbanUsingDELETE",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ibanId",
+            "in": "path",
+            "description": "ibanId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/submerchants/{id}/iban/{ibanId}/payouts": {
+      "get": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "getPayouts",
+        "operationId": "getPayoutsUsingGET_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ibanId",
+            "in": "path",
+            "description": "ibanId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SubmerchantPayout"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "executePayout",
+        "operationId": "executePayoutUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ibanId",
+            "in": "path",
+            "description": "ibanId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "submerchantPayout",
+            "description": "submerchantPayout",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SubmerchantPayout"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SubmerchantPayout"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/submerchants/{id}/iban/{ibanId}/payouts/{payoutId}": {
+      "get": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "getPayouts",
+        "operationId": "getPayoutsUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ibanId",
+            "in": "path",
+            "description": "ibanId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "payoutId",
+            "in": "path",
+            "description": "payoutId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SubmerchantPayout"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/submerchants/{id}/iban/{ibanId}/uploadDetails": {
+      "post": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "uploadIbanDetails",
+        "operationId": "uploadIbanDetailsUsingPOST",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "file",
+            "in": "formData",
+            "description": "file",
+            "required": true,
+            "type": "file"
+          },
+          {
+            "name": "ibanId",
+            "in": "path",
+            "description": "ibanId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/submerchants/{id}/suspend": {
+      "put": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "suspend",
+        "operationId": "suspendUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "updateStatusRequest",
+            "description": "updateStatusRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateStatusRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SubMerchant"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/submerchants/{id}/uploadKyc": {
+      "post": {
+        "tags": [
+          "api-sub-merchant"
+        ],
+        "summary": "uploadOtherIbanDetails",
+        "operationId": "uploadOtherIbanDetailsUsingPOST",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "files",
+            "in": "formData",
+            "description": "files",
+            "required": true,
+            "type": "array",
+            "items": {
+              "type": "file"
+            },
+            "collectionFormat": "multi"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/transfers": {
+      "get": {
+        "tags": [
+          "api-transfer"
+        ],
+        "summary": "Get items",
+        "operationId": "getItems_2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«Transfer»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "300"
+      },
+      "post": {
+        "tags": [
+          "api-transfer"
+        ],
+        "summary": "createPayout",
+        "operationId": "createPayoutUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "transfer",
+            "description": "transfer",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Transfer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Transfer"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/marketplaces/transfers/distinct": {
+      "get": {
+        "tags": [
+          "api-transfer"
+        ],
+        "summary": "Get distinct values for a given field",
+        "operationId": "distinct_2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«object»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "100"
+      }
+    },
+    "/marketplaces/transfers/recap": {
+      "get": {
+        "tags": [
+          "api-transfer"
+        ],
+        "summary": "Get recap quantities for a given field",
+        "operationId": "recap_2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "paged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "predicate",
+            "description": "predicate",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "sort.sorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "sort.unsorted",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "target",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "unpaged",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/SearchResult«RecapEntry»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "150"
+      }
+    },
+    "/marketplaces/transfers/{id}": {
+      "get": {
+        "tags": [
+          "api-transfer"
+        ],
+        "summary": "Get item",
+        "operationId": "getItem_2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Transfer"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Failure"
+          }
+        },
+        "deprecated": false,
+        "x-operationWeight": "200"
+      }
+    },
+    "/metrics": {
+      "get": {
+        "tags": [
+          "operation-handler"
+        ],
+        "summary": "handle",
+        "operationId": "handleUsingGET_2",
+        "produces": [
+          "application/vnd.spring-boot.actuator.v3+json",
+          "application/json",
+          "application/vnd.spring-boot.actuator.v2+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/metrics/{requiredMetricName}": {
+      "get": {
+        "tags": [
+          "operation-handler"
+        ],
+        "summary": "handle",
+        "operationId": "handleUsingGET_1",
+        "produces": [
+          "application/vnd.spring-boot.actuator.v3+json",
+          "application/json",
+          "application/vnd.spring-boot.actuator.v2+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/prometheus": {
+      "get": {
+        "tags": [
+          "operation-handler"
+        ],
+        "summary": "handle",
+        "operationId": "handleUsingGET_3",
+        "produces": [
+          "text/plain;version=0.0.4;charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/status": {
+      "get": {
+        "tags": [
+          "operation-handler"
+        ],
+        "summary": "handle",
+        "operationId": "handleUsingGET_5",
+        "produces": [
+          "application/vnd.spring-boot.actuator.v3+json",
+          "application/json",
+          "application/vnd.spring-boot.actuator.v2+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/status/**": {
+      "get": {
+        "tags": [
+          "operation-handler"
+        ],
+        "summary": "handle",
+        "operationId": "handleUsingGET_4",
+        "produces": [
+          "application/vnd.spring-boot.actuator.v3+json",
+          "application/json",
+          "application/vnd.spring-boot.actuator.v2+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "Address": {
+      "type": "object",
+      "properties": {
+        "address1": {
+          "type": "string"
+        },
+        "address2": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "zipCode": {
+          "type": "string"
+        }
+      },
+      "title": "Address"
+    },
+    "Company": {
+      "type": "object",
+      "properties": {
+        "legalName": {
+          "type": "string"
+        },
+        "nafCode": {
+          "type": "string"
+        },
+        "siret": {
+          "type": "string"
+        }
+      },
+      "title": "Company"
+    },
+    "Fee": {
+      "type": "object",
+      "properties": {
+        "amountWithVat": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "feeStatus": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "vat": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "title": "Fee"
+    },
+    "Holder": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      },
+      "title": "Holder"
+    },
+    "Iban": {
+      "type": "object",
+      "properties": {
+        "bic": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "holder": {
+          "$ref": "#/definitions/Holder"
+        },
+        "iban": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "isMine": {
+          "type": "boolean"
+        }
+      },
+      "title": "Iban"
+    },
+    "LegalRepresentative": {
+      "type": "object",
+      "properties": {
+        "alias": {
+          "type": "string"
+        },
+        "birthCity": {
+          "type": "string"
+        },
+        "birthCountry": {
+          "type": "string"
+        },
+        "birthDate": {
+          "type": "string",
+          "example": "yyyy-MM-dd'T'HH:mm:ss"
+        },
+        "civility": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "email": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        }
+      },
+      "title": "LegalRepresentative"
+    },
+    "ModelAndView": {
+      "type": "object",
+      "properties": {
+        "empty": {
+          "type": "boolean"
+        },
+        "model": {
+          "type": "object"
+        },
+        "modelMap": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "reference": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "100 CONTINUE",
+            "101 SWITCHING_PROTOCOLS",
+            "102 PROCESSING",
+            "103 CHECKPOINT",
+            "200 OK",
+            "201 CREATED",
+            "202 ACCEPTED",
+            "203 NON_AUTHORITATIVE_INFORMATION",
+            "204 NO_CONTENT",
+            "205 RESET_CONTENT",
+            "206 PARTIAL_CONTENT",
+            "207 MULTI_STATUS",
+            "208 ALREADY_REPORTED",
+            "226 IM_USED",
+            "300 MULTIPLE_CHOICES",
+            "301 MOVED_PERMANENTLY",
+            "302 FOUND",
+            "302 MOVED_TEMPORARILY",
+            "303 SEE_OTHER",
+            "304 NOT_MODIFIED",
+            "305 USE_PROXY",
+            "307 TEMPORARY_REDIRECT",
+            "308 PERMANENT_REDIRECT",
+            "400 BAD_REQUEST",
+            "401 UNAUTHORIZED",
+            "402 PAYMENT_REQUIRED",
+            "403 FORBIDDEN",
+            "404 NOT_FOUND",
+            "405 METHOD_NOT_ALLOWED",
+            "406 NOT_ACCEPTABLE",
+            "407 PROXY_AUTHENTICATION_REQUIRED",
+            "408 REQUEST_TIMEOUT",
+            "409 CONFLICT",
+            "410 GONE",
+            "411 LENGTH_REQUIRED",
+            "412 PRECONDITION_FAILED",
+            "413 PAYLOAD_TOO_LARGE",
+            "413 REQUEST_ENTITY_TOO_LARGE",
+            "414 URI_TOO_LONG",
+            "414 REQUEST_URI_TOO_LONG",
+            "415 UNSUPPORTED_MEDIA_TYPE",
+            "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+            "417 EXPECTATION_FAILED",
+            "418 I_AM_A_TEAPOT",
+            "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+            "420 METHOD_FAILURE",
+            "421 DESTINATION_LOCKED",
+            "422 UNPROCESSABLE_ENTITY",
+            "423 LOCKED",
+            "424 FAILED_DEPENDENCY",
+            "425 TOO_EARLY",
+            "426 UPGRADE_REQUIRED",
+            "428 PRECONDITION_REQUIRED",
+            "429 TOO_MANY_REQUESTS",
+            "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+            "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+            "500 INTERNAL_SERVER_ERROR",
+            "501 NOT_IMPLEMENTED",
+            "502 BAD_GATEWAY",
+            "503 SERVICE_UNAVAILABLE",
+            "504 GATEWAY_TIMEOUT",
+            "505 HTTP_VERSION_NOT_SUPPORTED",
+            "506 VARIANT_ALSO_NEGOTIATES",
+            "507 INSUFFICIENT_STORAGE",
+            "508 LOOP_DETECTED",
+            "509 BANDWIDTH_LIMIT_EXCEEDED",
+            "510 NOT_EXTENDED",
+            "511 NETWORK_AUTHENTICATION_REQUIRED"
+          ]
+        },
+        "view": {
+          "$ref": "#/definitions/View"
+        },
+        "viewName": {
+          "type": "string"
+        }
+      },
+      "title": "ModelAndView"
+    },
+    "Operator": {
+      "type": "object",
+      "properties": {
+        "clientId": {
+          "type": "string"
+        },
+        "createDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dbVersion": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "id": {
+          "type": "string"
+        },
+        "integrationMode": {
+          "type": "string"
+        },
+        "lastUpdateReason": {
+          "type": "string"
+        },
+        "modelVersion": {
+          "type": "string"
+        },
+        "operatorStatus": {
+          "type": "boolean"
+        },
+        "realmId": {
+          "type": "string"
+        },
+        "smoneyDetails": {
+          "$ref": "#/definitions/SMoneyDetails"
+        },
+        "smoneyRemoteInfo": {
+          "$ref": "#/definitions/SMoneyRemoteInfo"
+        },
+        "updateDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "Operator"
+    },
+    "OperatorCreateRequest": {
+      "type": "object",
+      "properties": {
+        "clientId": {
+          "type": "string"
+        },
+        "integrationMode": {
+          "type": "string"
+        },
+        "operatorStatus": {
+          "type": "boolean"
+        },
+        "smoneyDetails": {
+          "$ref": "#/definitions/SMoneyDetails"
+        }
+      },
+      "title": "OperatorCreateRequest"
+    },
+    "OperatorPayout": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "executedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "externalOrderId": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "motif": {
+          "type": "string"
+        },
+        "operatorId": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        }
+      },
+      "title": "OperatorPayout"
+    },
+    "OperatorUpdateRequest": {
+      "type": "object",
+      "properties": {
+        "clientId": {
+          "type": "string"
+        },
+        "integrationMode": {
+          "type": "string"
+        },
+        "operatorStatus": {
+          "type": "boolean"
+        },
+        "smoneyDetails": {
+          "$ref": "#/definitions/SMoneyDetails"
+        },
+        "smoneyRemoteInfo": {
+          "$ref": "#/definitions/SMoneyRemoteInfo"
+        }
+      },
+      "title": "OperatorUpdateRequest"
+    },
+    "PayoutFee": {
+      "type": "object",
+      "properties": {
+        "Amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "AmountWithVAT": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "Status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "VAT": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "title": "PayoutFee"
+    },
+    "PayoutResponse": {
+      "type": "object",
+      "properties": {
+        "Amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "ExecutedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "Fee": {
+          "$ref": "#/definitions/PayoutFee"
+        },
+        "Id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "Motif": {
+          "type": "string"
+        },
+        "OperationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "OrderId": {
+          "type": "string"
+        },
+        "Reference": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "PayoutResponse"
+    },
+    "RecapEntry": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "targetValue": {
+          "type": "string"
+        }
+      },
+      "title": "RecapEntry"
+    },
+    "SMoneyDetails": {
+      "type": "object",
+      "properties": {
+        "appUserId": {
+          "type": "string"
+        },
+        "bankId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "smoneyPath": {
+          "type": "string"
+        },
+        "smoneyToken": {
+          "type": "string"
+        }
+      },
+      "title": "SMoneyDetails"
+    },
+    "SMoneyRemoteInfo": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "$ref": "#/definitions/Address"
+        },
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "company": {
+          "$ref": "#/definitions/Company"
+        },
+        "legalRepresentative": {
+          "$ref": "#/definitions/LegalRepresentative"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "subAccounts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SubAccount"
+          }
+        }
+      },
+      "title": "SMoneyRemoteInfo"
+    },
+    "SearchResult«Iban»": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Iban"
+          }
+        },
+        "last": {
+          "type": "boolean"
+        },
+        "number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageIndex": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalItems": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalPages": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "SearchResult«Iban»"
+    },
+    "SearchResult«Operator»": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Operator"
+          }
+        },
+        "last": {
+          "type": "boolean"
+        },
+        "number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageIndex": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalItems": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalPages": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "SearchResult«Operator»"
+    },
+    "SearchResult«RecapEntry»": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RecapEntry"
+          }
+        },
+        "last": {
+          "type": "boolean"
+        },
+        "number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageIndex": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalItems": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalPages": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "SearchResult«RecapEntry»"
+    },
+    "SearchResult«SubMerchant»": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SubMerchant"
+          }
+        },
+        "last": {
+          "type": "boolean"
+        },
+        "number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageIndex": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalItems": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalPages": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "SearchResult«SubMerchant»"
+    },
+    "SearchResult«Transfer»": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Transfer"
+          }
+        },
+        "last": {
+          "type": "boolean"
+        },
+        "number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageIndex": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalItems": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalPages": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "SearchResult«Transfer»"
+    },
+    "SearchResult«object»": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "last": {
+          "type": "boolean"
+        },
+        "number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageIndex": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalItems": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalPages": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "SearchResult«object»"
+    },
+    "SubAccount": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "appAccountId": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        }
+      },
+      "title": "SubAccount"
+    },
+    "SubMerchant": {
+      "type": "object",
+      "properties": {
+        "createDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "dbVersion": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "externalShopId": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "kycStatus": {
+          "type": "string"
+        },
+        "lastUpdateReason": {
+          "type": "string"
+        },
+        "merchantCategoryCode": {
+          "type": "string"
+        },
+        "modelVersion": {
+          "type": "string"
+        },
+        "operatorId": {
+          "type": "string"
+        },
+        "originalId": {
+          "type": "string"
+        },
+        "payin": {
+          "type": "boolean"
+        },
+        "realmId": {
+          "type": "string"
+        },
+        "rollingReserve": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "smoneyRemoteInfo": {
+          "$ref": "#/definitions/SMoneyRemoteInfo"
+        },
+        "updateDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "vatNumber": {
+          "type": "string"
+        }
+      },
+      "title": "SubMerchant"
+    },
+    "SubmerchantPayout": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "executedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "externalOrderId": {
+          "type": "string"
+        },
+        "fee": {
+          "$ref": "#/definitions/Fee"
+        },
+        "id": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "motif": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        }
+      },
+      "title": "SubmerchantPayout"
+    },
+    "Transfer": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "beneficiaryId": {
+          "type": "string"
+        },
+        "createDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dbVersion": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "fee": {
+          "$ref": "#/definitions/Fee"
+        },
+        "id": {
+          "type": "string"
+        },
+        "lastUpdateReason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "modelVersion": {
+          "type": "string"
+        },
+        "operatorId": {
+          "type": "string"
+        },
+        "originalId": {
+          "type": "string"
+        },
+        "realmId": {
+          "type": "string"
+        },
+        "senderId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "REQUESTING",
+            "FAILED",
+            "COMPLETE",
+            "REFUSED"
+          ]
+        },
+        "transferDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updateDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "Transfer"
+    },
+    "UpdateIbanRequest": {
+      "type": "object",
+      "properties": {
+        "bic": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "holder": {
+          "$ref": "#/definitions/Holder"
+        },
+        "iban": {
+          "type": "string"
+        },
+        "isMine": {
+          "type": "string"
+        }
+      },
+      "title": "UpdateIbanRequest"
+    },
+    "UpdateStatusRequest": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "UpdateStatusRequest"
+    },
+    "View": {
+      "type": "object",
+      "properties": {
+        "contentType": {
+          "type": "string"
+        }
+      },
+      "title": "View"
+    },
+    "WriteIbanRequest": {
+      "type": "object",
+      "properties": {
+        "bic": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "holder": {
+          "$ref": "#/definitions/Holder"
+        },
+        "iban": {
+          "type": "string"
+        },
+        "isMine": {
+          "type": "string"
+        }
+      },
+      "title": "WriteIbanRequest"
+    }
+  }
+}
