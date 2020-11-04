@@ -22,9 +22,6 @@
       "description": "Operation Handler"
     },
     {
-      "name": "Marketplaces"
-    },
-    {
       "name": "Submerchant"
     },
     {
@@ -37,7 +34,7 @@
   "paths": {
     "/operators": {
       "get": {
-        "summary": "Get items",
+        "summary": "Get Operators",
         "operationId": "getItems",
         "produces": [
           "application/json"
@@ -132,7 +129,7 @@
         ]
       },
       "post": {
-        "summary": "Create an item",
+        "summary": "Create an Operator",
         "operationId": "createItem",
         "consumes": [
           "application/json"
@@ -180,7 +177,6 @@
         "deprecated": false,
         "x-operationWeight": "300",
         "tags": [
-          "Marketplaces",
           "Operators"
         ]
       },
@@ -188,7 +184,7 @@
     },
     "/operators/{id}": {
       "get": {
-        "summary": "Get item",
+        "summary": "Get a Operator",
         "operationId": "getItem",
         "produces": [
           "application/json"
@@ -229,7 +225,7 @@
         ]
       },
       "put": {
-        "summary": "Update item",
+        "summary": "Update an Operator",
         "operationId": "updateItem",
         "consumes": [
           "application/json"
@@ -285,7 +281,7 @@
         ]
       },
       "delete": {
-        "summary": "Delete item",
+        "summary": "Delete an Operator",
         "operationId": "deleteItem",
         "produces": [
           "application/json"
@@ -335,7 +331,7 @@
     },
     "/operators/{id}/payouts": {
       "get": {
-        "summary": "getPayout",
+        "summary": "Get Payouts from a Operator",
         "operationId": "getPayoutUsingGET",
         "produces": [
           "application/json"
@@ -375,7 +371,7 @@
         ]
       },
       "post": {
-        "summary": "createPayout",
+        "summary": "Create Payout for an Operator",
         "operationId": "createPayoutUsingPOST",
         "consumes": [
           "application/json"
@@ -430,7 +426,7 @@
     },
     "/submerchants": {
       "get": {
-        "summary": "Get items",
+        "summary": "Get Submerchants",
         "operationId": "getItems_1",
         "produces": [
           "application/json"
@@ -525,7 +521,7 @@
         ]
       },
       "post": {
-        "summary": "Create an item",
+        "summary": "Create a Submerchant",
         "operationId": "createItem_1",
         "consumes": [
           "application/json"
@@ -575,11 +571,12 @@
         "tags": [
           "Submerchant"
         ]
-      }
+      },
+      "parameters": []
     },
     "/submerchants/{id}": {
       "get": {
-        "summary": "Get item",
+        "summary": "Get a Submerchat",
         "operationId": "getItem_1",
         "produces": [
           "application/json"
@@ -620,7 +617,7 @@
         ]
       },
       "put": {
-        "summary": "Update item",
+        "summary": "Update a submerchant",
         "operationId": "updateItem_1",
         "consumes": [
           "application/json"
@@ -676,7 +673,7 @@
         ]
       },
       "delete": {
-        "summary": "Delete item",
+        "summary": "Delete a Submerchant",
         "operationId": "deleteItem_1",
         "produces": [
           "application/json"
@@ -725,7 +722,7 @@
     },
     "/submerchants/{id}/iban": {
       "get": {
-        "summary": "readIban",
+        "summary": "Get an Iban from a Submerchant",
         "operationId": "readIbanUsingGET",
         "produces": [
           "application/json"
@@ -807,7 +804,7 @@
         ]
       },
       "post": {
-        "summary": "createIban",
+        "summary": "Create an Iban for a Submerchant",
         "operationId": "createIbanUsingPOST",
         "consumes": [
           "application/json"
@@ -861,7 +858,7 @@
     },
     "/submerchants/{id}/iban/{ibanId}": {
       "put": {
-        "summary": "updateIban",
+        "summary": "Update an Iban from a Submerchant",
         "operationId": "updateIbanUsingPUT",
         "consumes": [
           "application/json"
@@ -920,7 +917,7 @@
         ]
       },
       "delete": {
-        "summary": "deleteIban",
+        "summary": "Delete an Iban from a Submerchant",
         "operationId": "deleteIbanUsingDELETE",
         "produces": [
           "application/json"
@@ -963,7 +960,7 @@
     },
     "/submerchants/{id}/iban/{ibanId}/payouts": {
       "get": {
-        "summary": "getPayouts",
+        "summary": "Get Payouts from a Submerchant",
         "operationId": "getPayoutsUsingGET_1",
         "produces": [
           "application/json"
@@ -1010,7 +1007,7 @@
         ]
       },
       "post": {
-        "summary": "executePayout",
+        "summary": "Execute Payouts from a Submerchant",
         "operationId": "executePayoutUsingPOST",
         "consumes": [
           "application/json"
@@ -1071,7 +1068,7 @@
     },
     "/submerchants/{id}/iban/{ibanId}/payouts/{payoutId}": {
       "get": {
-        "summary": "getPayouts",
+        "summary": "Get a Payout from a Submerchant",
         "operationId": "getPayoutsUsingGET",
         "produces": [
           "application/json"
@@ -1124,7 +1121,7 @@
     },
     "/submerchants/{id}/iban/{ibanId}/uploadDetails": {
       "post": {
-        "summary": "uploadIbanDetails",
+        "summary": "Upload a Iban Details from a Submerchant",
         "operationId": "uploadIbanDetailsUsingPOST",
         "consumes": [
           "multipart/form-data"
@@ -1180,7 +1177,7 @@
     },
     "/submerchants/{id}/suspend": {
       "put": {
-        "summary": "suspend",
+        "summary": "Suspend a Submerchant",
         "operationId": "suspendUsingPUT",
         "consumes": [
           "application/json"
@@ -1234,7 +1231,7 @@
     },
     "/submerchants/{id}/uploadKyc": {
       "post": {
-        "summary": "uploadOtherIbanDetails",
+        "summary": "Upload KYC Details for a Submerchant",
         "operationId": "uploadOtherIbanDetailsUsingPOST",
         "consumes": [
           "multipart/form-data"
@@ -1287,7 +1284,7 @@
     },
     "/transfers": {
       "get": {
-        "summary": "Get items",
+        "summary": "Get Transfers",
         "operationId": "getItems_2",
         "produces": [
           "application/json"
@@ -1382,7 +1379,7 @@
         ]
       },
       "post": {
-        "summary": "createPayout",
+        "summary": "Create Transfers",
         "operationId": "createPayoutUsingPOST_1",
         "consumes": [
           "application/json"
@@ -1429,7 +1426,7 @@
     },
     "/transfers/{id}": {
       "get": {
-        "summary": "Get item",
+        "summary": "Get a Transfer",
         "operationId": "getItem_2",
         "produces": [
           "application/json"
