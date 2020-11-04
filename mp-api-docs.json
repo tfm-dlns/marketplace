@@ -14,18 +14,6 @@
   "host": "staging-payment.dlns.io",
   "tags": [
     {
-      "name": "api-operator",
-      "description": "Api Operator"
-    },
-    {
-      "name": "api-sub-merchant",
-      "description": "Api Sub Merchant"
-    },
-    {
-      "name": "api-transfer",
-      "description": "Api Transfer"
-    },
-    {
       "name": "basic-error-controller",
       "description": "Basic Error Controller"
     },
@@ -145,9 +133,6 @@
         ]
       },
       "post": {
-        "tags": [
-          "api-operator"
-        ],
         "summary": "Create an item",
         "operationId": "createItem",
         "consumes": [
@@ -194,7 +179,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "300"
+        "x-operationWeight": "300",
+        "tags": [
+          "Marketplaces",
+          "Operators"
+        ]
       },
       "parameters": []
     },
@@ -242,9 +231,6 @@
         ]
       },
       "put": {
-        "tags": [
-          "api-operator"
-        ],
         "summary": "Update item",
         "operationId": "updateItem",
         "consumes": [
@@ -295,12 +281,13 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "400"
+        "x-operationWeight": "400",
+        "tags": [
+          "Marketplaces",
+          "Operators"
+        ]
       },
       "delete": {
-        "tags": [
-          "api-operator"
-        ],
         "summary": "Delete item",
         "operationId": "deleteItem",
         "produces": [
@@ -342,7 +329,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "500"
+        "x-operationWeight": "500",
+        "tags": [
+          "Marketplaces",
+          "Operators"
+        ]
       },
       "parameters": []
     },
@@ -389,9 +380,6 @@
         ]
       },
       "post": {
-        "tags": [
-          "api-operator"
-        ],
         "summary": "createPayout",
         "operationId": "createPayoutUsingPOST",
         "consumes": [
@@ -438,7 +426,11 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Operators"
+        ]
       },
       "parameters": []
     },
@@ -540,9 +532,6 @@
         ]
       },
       "post": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "Create an item",
         "operationId": "createItem_1",
         "consumes": [
@@ -589,7 +578,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "300"
+        "x-operationWeight": "300",
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
     "/submerchants/{id}": {
@@ -636,9 +629,6 @@
         ]
       },
       "put": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "Update item",
         "operationId": "updateItem_1",
         "consumes": [
@@ -689,12 +679,13 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "400"
+        "x-operationWeight": "400",
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       },
       "delete": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "Delete item",
         "operationId": "deleteItem_1",
         "produces": [
@@ -736,7 +727,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "500"
+        "x-operationWeight": "500",
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
     "/submerchants/{id}/iban": {
@@ -824,9 +819,6 @@
         ]
       },
       "post": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "createIban",
         "operationId": "createIbanUsingPOST",
         "consumes": [
@@ -873,7 +865,11 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
     "/submerchants/{id}/iban/{ibanId}": {
@@ -938,9 +934,6 @@
         ]
       },
       "delete": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "deleteIban",
         "operationId": "deleteIbanUsingDELETE",
         "produces": [
@@ -976,7 +969,11 @@
             "description": "Forbidden"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
     "/submerchants/{id}/iban/{ibanId}/payouts": {
@@ -1029,9 +1026,6 @@
         ]
       },
       "post": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "executePayout",
         "operationId": "executePayoutUsingPOST",
         "consumes": [
@@ -1085,7 +1079,11 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
     "/submerchants/{id}/iban/{ibanId}/payouts/{payoutId}": {
@@ -1406,9 +1404,6 @@
         ]
       },
       "post": {
-        "tags": [
-          "api-transfer"
-        ],
         "summary": "createPayout",
         "operationId": "createPayoutUsingPOST_1",
         "consumes": [
@@ -1448,7 +1443,11 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Transfers"
+        ]
       }
     },
     "/transfers/{id}": {
