@@ -11,13 +11,8 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   },
-  "host": "staging-payment.dlns.io:80",
-  "basePath": "/",
+  "host": "staging-payment.dlns.io",
   "tags": [
-    {
-      "name": "api-callback",
-      "description": "Api Callback"
-    },
     {
       "name": "api-operator",
       "description": "Api Operator"
@@ -37,401 +32,23 @@
     {
       "name": "operation-handler",
       "description": "Operation Handler"
+    },
+    {
+      "name": "Marketplaces"
+    },
+    {
+      "name": "Submerchant"
+    },
+    {
+      "name": "Operators"
+    },
+    {
+      "name": "Transfers"
     }
   ],
   "paths": {
-    "/error": {
+    "/operators": {
       "get": {
-        "tags": [
-          "basic-error-controller"
-        ],
-        "summary": "error",
-        "operationId": "errorUsingGET",
-        "produces": [
-          "*/*"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "object"
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      },
-      "head": {
-        "tags": [
-          "basic-error-controller"
-        ],
-        "summary": "error",
-        "operationId": "errorUsingHEAD",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "*/*"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "object"
-              }
-            }
-          },
-          "204": {
-            "description": "No Content"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "deprecated": false
-      },
-      "post": {
-        "tags": [
-          "basic-error-controller"
-        ],
-        "summary": "error",
-        "operationId": "errorUsingPOST",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "*/*"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "object"
-              }
-            }
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      },
-      "put": {
-        "tags": [
-          "basic-error-controller"
-        ],
-        "summary": "error",
-        "operationId": "errorUsingPUT",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "*/*"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "object"
-              }
-            }
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      },
-      "delete": {
-        "tags": [
-          "basic-error-controller"
-        ],
-        "summary": "error",
-        "operationId": "errorUsingDELETE",
-        "produces": [
-          "*/*"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "object"
-              }
-            }
-          },
-          "204": {
-            "description": "No Content"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "deprecated": false
-      },
-      "options": {
-        "tags": [
-          "basic-error-controller"
-        ],
-        "summary": "error",
-        "operationId": "errorUsingOPTIONS",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "*/*"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "object"
-              }
-            }
-          },
-          "204": {
-            "description": "No Content"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "deprecated": false
-      },
-      "patch": {
-        "tags": [
-          "basic-error-controller"
-        ],
-        "summary": "error",
-        "operationId": "errorUsingPATCH",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "*/*"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "object"
-              }
-            }
-          },
-          "204": {
-            "description": "No Content"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/info": {
-      "get": {
-        "tags": [
-          "operation-handler"
-        ],
-        "summary": "handle",
-        "operationId": "handleUsingGET",
-        "produces": [
-          "application/vnd.spring-boot.actuator.v3+json",
-          "application/json",
-          "application/vnd.spring-boot.actuator.v2+json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "body",
-            "required": false,
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/marketplaces/ibanUpdate": {
-      "post": {
-        "tags": [
-          "api-callback"
-        ],
-        "summary": "create",
-        "operationId": "createUsingPOST",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "*/*"
-        ],
-        "parameters": [
-          {
-            "name": "params",
-            "in": "query",
-            "description": "params",
-            "required": true,
-            "items": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false,
-        "description": "  "
-      }
-    },
-    "/marketplaces/kycUpdate": {
-      "post": {
-        "tags": [
-          "api-callback"
-        ],
-        "summary": "kycUpdate",
-        "operationId": "kycUpdateUsingPOST",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "*/*"
-        ],
-        "parameters": [
-          {
-            "name": "params",
-            "in": "query",
-            "description": "params",
-            "required": true,
-            "items": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/marketplaces/operators": {
-      "get": {
-        "tags": [
-          "api-operator"
-        ],
         "summary": "Get items",
         "operationId": "getItems",
         "produces": [
@@ -521,7 +138,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "300"
+        "x-operationWeight": "300",
+        "tags": [
+          "Marketplaces",
+          "Operators"
+        ]
       },
       "post": {
         "tags": [
@@ -574,207 +195,11 @@
         },
         "deprecated": false,
         "x-operationWeight": "300"
-      }
+      },
+      "parameters": []
     },
-    "/marketplaces/operators/distinct": {
+    "/operators/{id}": {
       "get": {
-        "tags": [
-          "api-operator"
-        ],
-        "summary": "Get distinct values for a given field",
-        "operationId": "distinct",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "offset",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "paged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "predicate",
-            "description": "predicate",
-            "required": false,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "sort.sorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "sort.unsorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "target",
-            "in": "query",
-            "description": "target",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "unpaged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/SearchResult«object»"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Failure"
-          }
-        },
-        "deprecated": false,
-        "x-operationWeight": "100"
-      }
-    },
-    "/marketplaces/operators/recap": {
-      "get": {
-        "tags": [
-          "api-operator"
-        ],
-        "summary": "Get recap quantities for a given field",
-        "operationId": "recap",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "offset",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "paged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "predicate",
-            "description": "predicate",
-            "required": false,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "sort.sorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "sort.unsorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "target",
-            "in": "query",
-            "description": "target",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "unpaged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/SearchResult«RecapEntry»"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Failure"
-          }
-        },
-        "deprecated": false,
-        "x-operationWeight": "150"
-      }
-    },
-    "/marketplaces/operators/{id}": {
-      "get": {
-        "tags": [
-          "api-operator"
-        ],
         "summary": "Get item",
         "operationId": "getItem",
         "produces": [
@@ -810,7 +235,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "200"
+        "x-operationWeight": "200",
+        "tags": [
+          "Marketplaces",
+          "Operators"
+        ]
       },
       "put": {
         "tags": [
@@ -914,13 +343,11 @@
         },
         "deprecated": false,
         "x-operationWeight": "500"
-      }
+      },
+      "parameters": []
     },
-    "/marketplaces/operators/{id}/payouts": {
+    "/operators/{id}/payouts": {
       "get": {
-        "tags": [
-          "api-operator"
-        ],
         "summary": "getPayout",
         "operationId": "getPayoutUsingGET",
         "produces": [
@@ -955,7 +382,11 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Operators"
+        ]
       },
       "post": {
         "tags": [
@@ -1008,13 +439,11 @@
           }
         },
         "deprecated": false
-      }
+      },
+      "parameters": []
     },
-    "/marketplaces/submerchants": {
+    "/submerchants": {
       "get": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "Get items",
         "operationId": "getItems_1",
         "produces": [
@@ -1104,7 +533,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "300"
+        "x-operationWeight": "300",
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       },
       "post": {
         "tags": [
@@ -1159,205 +592,8 @@
         "x-operationWeight": "300"
       }
     },
-    "/marketplaces/submerchants/distinct": {
+    "/submerchants/{id}": {
       "get": {
-        "tags": [
-          "api-sub-merchant"
-        ],
-        "summary": "Get distinct values for a given field",
-        "operationId": "distinct_1",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "offset",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "paged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "predicate",
-            "description": "predicate",
-            "required": false,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "sort.sorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "sort.unsorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "target",
-            "in": "query",
-            "description": "target",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "unpaged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/SearchResult«object»"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Failure"
-          }
-        },
-        "deprecated": false,
-        "x-operationWeight": "100"
-      }
-    },
-    "/marketplaces/submerchants/recap": {
-      "get": {
-        "tags": [
-          "api-sub-merchant"
-        ],
-        "summary": "Get recap quantities for a given field",
-        "operationId": "recap_1",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "offset",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "paged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "predicate",
-            "description": "predicate",
-            "required": false,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "sort.sorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "sort.unsorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "target",
-            "in": "query",
-            "description": "target",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "unpaged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/SearchResult«RecapEntry»"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Failure"
-          }
-        },
-        "deprecated": false,
-        "x-operationWeight": "150"
-      }
-    },
-    "/marketplaces/submerchants/{id}": {
-      "get": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "Get item",
         "operationId": "getItem_1",
         "produces": [
@@ -1393,7 +629,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "200"
+        "x-operationWeight": "200",
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       },
       "put": {
         "tags": [
@@ -1499,11 +739,8 @@
         "x-operationWeight": "500"
       }
     },
-    "/marketplaces/submerchants/{id}/iban": {
+    "/submerchants/{id}/iban": {
       "get": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "readIban",
         "operationId": "readIbanUsingGET",
         "produces": [
@@ -1580,7 +817,11 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       },
       "post": {
         "tags": [
@@ -1635,11 +876,8 @@
         "deprecated": false
       }
     },
-    "/marketplaces/submerchants/{id}/iban/{ibanId}": {
+    "/submerchants/{id}/iban/{ibanId}": {
       "put": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "updateIban",
         "operationId": "updateIbanUsingPUT",
         "consumes": [
@@ -1693,7 +931,11 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       },
       "delete": {
         "tags": [
@@ -1737,11 +979,8 @@
         "deprecated": false
       }
     },
-    "/marketplaces/submerchants/{id}/iban/{ibanId}/payouts": {
+    "/submerchants/{id}/iban/{ibanId}/payouts": {
       "get": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "getPayouts",
         "operationId": "getPayoutsUsingGET_1",
         "produces": [
@@ -1783,7 +1022,11 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       },
       "post": {
         "tags": [
@@ -1845,11 +1088,8 @@
         "deprecated": false
       }
     },
-    "/marketplaces/submerchants/{id}/iban/{ibanId}/payouts/{payoutId}": {
+    "/submerchants/{id}/iban/{ibanId}/payouts/{payoutId}": {
       "get": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "getPayouts",
         "operationId": "getPayoutsUsingGET",
         "produces": [
@@ -1895,14 +1135,15 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
-    "/marketplaces/submerchants/{id}/iban/{ibanId}/uploadDetails": {
+    "/submerchants/{id}/iban/{ibanId}/uploadDetails": {
       "post": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "uploadIbanDetails",
         "operationId": "uploadIbanDetailsUsingPOST",
         "consumes": [
@@ -1951,14 +1192,15 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
-    "/marketplaces/submerchants/{id}/suspend": {
+    "/submerchants/{id}/suspend": {
       "put": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "suspend",
         "operationId": "suspendUsingPUT",
         "consumes": [
@@ -2005,14 +1247,15 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
-    "/marketplaces/submerchants/{id}/uploadKyc": {
+    "/submerchants/{id}/uploadKyc": {
       "post": {
-        "tags": [
-          "api-sub-merchant"
-        ],
         "summary": "uploadOtherIbanDetails",
         "operationId": "uploadOtherIbanDetailsUsingPOST",
         "consumes": [
@@ -2058,14 +1301,15 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "tags": [
+          "Marketplaces",
+          "Submerchant"
+        ]
       }
     },
-    "/marketplaces/transfers": {
+    "/transfers": {
       "get": {
-        "tags": [
-          "api-transfer"
-        ],
         "summary": "Get items",
         "operationId": "getItems_2",
         "produces": [
@@ -2155,7 +1399,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "300"
+        "x-operationWeight": "300",
+        "tags": [
+          "Marketplaces",
+          "Transfers"
+        ]
       },
       "post": {
         "tags": [
@@ -2203,205 +1451,8 @@
         "deprecated": false
       }
     },
-    "/marketplaces/transfers/distinct": {
+    "/transfers/{id}": {
       "get": {
-        "tags": [
-          "api-transfer"
-        ],
-        "summary": "Get distinct values for a given field",
-        "operationId": "distinct_2",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "offset",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "paged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "predicate",
-            "description": "predicate",
-            "required": false,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "sort.sorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "sort.unsorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "target",
-            "in": "query",
-            "description": "target",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "unpaged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/SearchResult«object»"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Failure"
-          }
-        },
-        "deprecated": false,
-        "x-operationWeight": "100"
-      }
-    },
-    "/marketplaces/transfers/recap": {
-      "get": {
-        "tags": [
-          "api-transfer"
-        ],
-        "summary": "Get recap quantities for a given field",
-        "operationId": "recap_2",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "offset",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "paged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "body",
-            "name": "predicate",
-            "description": "predicate",
-            "required": false,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "sort.sorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "sort.unsorted",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "name": "target",
-            "in": "query",
-            "description": "target",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "unpaged",
-            "in": "query",
-            "required": false,
-            "type": "boolean"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/SearchResult«RecapEntry»"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Failure"
-          }
-        },
-        "deprecated": false,
-        "x-operationWeight": "150"
-      }
-    },
-    "/marketplaces/transfers/{id}": {
-      "get": {
-        "tags": [
-          "api-transfer"
-        ],
         "summary": "Get item",
         "operationId": "getItem_2",
         "produces": [
@@ -2437,235 +1488,11 @@
           }
         },
         "deprecated": false,
-        "x-operationWeight": "200"
-      }
-    },
-    "/metrics": {
-      "get": {
+        "x-operationWeight": "200",
         "tags": [
-          "operation-handler"
-        ],
-        "summary": "handle",
-        "operationId": "handleUsingGET_2",
-        "produces": [
-          "application/vnd.spring-boot.actuator.v3+json",
-          "application/json",
-          "application/vnd.spring-boot.actuator.v2+json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "body",
-            "required": false,
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/metrics/{requiredMetricName}": {
-      "get": {
-        "tags": [
-          "operation-handler"
-        ],
-        "summary": "handle",
-        "operationId": "handleUsingGET_1",
-        "produces": [
-          "application/vnd.spring-boot.actuator.v3+json",
-          "application/json",
-          "application/vnd.spring-boot.actuator.v2+json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "body",
-            "required": false,
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/prometheus": {
-      "get": {
-        "tags": [
-          "operation-handler"
-        ],
-        "summary": "handle",
-        "operationId": "handleUsingGET_3",
-        "produces": [
-          "text/plain;version=0.0.4;charset=utf-8"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "body",
-            "required": false,
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/status": {
-      "get": {
-        "tags": [
-          "operation-handler"
-        ],
-        "summary": "handle",
-        "operationId": "handleUsingGET_5",
-        "produces": [
-          "application/vnd.spring-boot.actuator.v3+json",
-          "application/json",
-          "application/vnd.spring-boot.actuator.v2+json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "body",
-            "required": false,
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/status/**": {
-      "get": {
-        "tags": [
-          "operation-handler"
-        ],
-        "summary": "handle",
-        "operationId": "handleUsingGET_4",
-        "produces": [
-          "application/vnd.spring-boot.actuator.v3+json",
-          "application/json",
-          "application/vnd.spring-boot.actuator.v2+json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "body",
-            "required": false,
-            "schema": {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        },
-        "deprecated": false
+          "Marketplaces",
+          "Transfers"
+        ]
       }
     }
   },
@@ -3604,5 +2431,10 @@
       },
       "title": "WriteIbanRequest"
     }
-  }
+  },
+  "securityDefinitions": {},
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/marketplaces"
 }
