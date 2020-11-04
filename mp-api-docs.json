@@ -128,7 +128,6 @@
         "deprecated": false,
         "x-operationWeight": "300",
         "tags": [
-          "Marketplaces",
           "Operators"
         ]
       },
@@ -226,7 +225,6 @@
         "deprecated": false,
         "x-operationWeight": "200",
         "tags": [
-          "Marketplaces",
           "Operators"
         ]
       },
@@ -283,7 +281,6 @@
         "deprecated": false,
         "x-operationWeight": "400",
         "tags": [
-          "Marketplaces",
           "Operators"
         ]
       },
@@ -331,7 +328,6 @@
         "deprecated": false,
         "x-operationWeight": "500",
         "tags": [
-          "Marketplaces",
           "Operators"
         ]
       },
@@ -375,7 +371,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Operators"
         ]
       },
@@ -428,7 +423,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Operators"
         ]
       },
@@ -527,7 +521,6 @@
         "deprecated": false,
         "x-operationWeight": "300",
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       },
@@ -580,7 +573,6 @@
         "deprecated": false,
         "x-operationWeight": "300",
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -624,7 +616,6 @@
         "deprecated": false,
         "x-operationWeight": "200",
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       },
@@ -681,7 +672,6 @@
         "deprecated": false,
         "x-operationWeight": "400",
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       },
@@ -729,7 +719,6 @@
         "deprecated": false,
         "x-operationWeight": "500",
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -814,7 +803,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       },
@@ -867,7 +855,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -929,7 +916,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       },
@@ -971,7 +957,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -1021,7 +1006,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       },
@@ -1081,7 +1065,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -1135,7 +1118,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -1192,7 +1174,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -1247,7 +1228,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -1301,7 +1281,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Submerchant"
         ]
       }
@@ -1399,7 +1378,6 @@
         "deprecated": false,
         "x-operationWeight": "300",
         "tags": [
-          "Marketplaces",
           "Transfers"
         ]
       },
@@ -1445,7 +1423,6 @@
         },
         "deprecated": false,
         "tags": [
-          "Marketplaces",
           "Transfers"
         ]
       }
@@ -1489,7 +1466,6 @@
         "deprecated": false,
         "x-operationWeight": "200",
         "tags": [
-          "Marketplaces",
           "Transfers"
         ]
       }
