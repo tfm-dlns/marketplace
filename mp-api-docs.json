@@ -373,7 +373,8 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "description": "  "
       }
     },
     "/marketplaces/kycUpdate": {
