@@ -10,7 +10,7 @@
     },
     "license": {}
   },
-  "host": "staging-payment.dlns.io",
+  "host": "sandbox-payment.dlns.io",
   "tags": [
     {
       "name": "basic-error-controller",
